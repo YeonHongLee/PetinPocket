@@ -1,4 +1,24 @@
-/* 해시태그 버튼 스타일 */
+/* 강아지/고양이 탭 */
+.pet-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.pet-filter {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* 해시태그 버튼 */
 .hashtag-container {
   display: flex;
   justify-content: center;
@@ -24,7 +44,7 @@
   background-color: #e6993d;
 }
 
-/* 카테고리 섹션 */
+/* 섹션 기본 */
 .item-section {
   padding: 40px 20px;
 }
@@ -35,13 +55,13 @@
   margin-bottom: 20px;
 }
 
-/* 그리드 */
+/* 3x3 그리드 */
 .item-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto 20px auto;
 }
 
@@ -50,8 +70,8 @@
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  aspect-ratio: 1 / 1; /* 정사각형 */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .item-card img {
@@ -81,86 +101,29 @@
 
 .more-btn:hover {
   background-color: #995522;
-}/* 해시태그 버튼 스타일 */
-.hashtag-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
-  background-color: #fff3e0;
 }
 
-.hashtag-container button {
+/* Top 버튼 */
+#top-btn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 1000;
   background-color: #ffaf53;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
   color: white;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.hashtag-container button:hover {
+#top-btn:hover {
   background-color: #e6993d;
 }
 
-/* 카테고리 섹션 */
-.item-section {
-  padding: 40px 20px;
-}
-
-.item-section h2 {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-
-/* 그리드 */
-.item-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto 20px auto;
-}
-
-.item-card {
-  background-color: #ffe0bd;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  aspect-ratio: 1 / 1; /* 정사각형 */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.item-card img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.item-card h3 {
-  font-size: 16px;
-  margin: 0;
-  color: #333;
-}
-
-/* 더보기 버튼 */
-.more-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #b36c37;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 .more-btn:hover {
   background-color: #995522;
