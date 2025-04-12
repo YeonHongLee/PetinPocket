@@ -17,7 +17,7 @@ const categoryData = {
   etc: dummyItems("기타")
 };
 
-const itemsPerPage = 15;
+const itemsPerPage = 9;
 const loadedCount = {};
 
 function renderItems(category) {
@@ -46,12 +46,11 @@ function renderItems(category) {
   }
 }
 
-// 초기 렌더링
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
 });
 
-// 더보기 버튼 이벤트
+// 더보기 버튼
 const moreButtons = document.querySelectorAll(".more-btn");
 moreButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -59,3 +58,22 @@ moreButtons.forEach(button => {
     renderItems(cat);
   });
 });
+
+// Top 버튼
+const topBtn = document.createElement("button");
+topBtn.id = "top-btn";
+topBtn.innerHTML = "▲";
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 600) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
