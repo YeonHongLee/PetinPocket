@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>물품나눔 - Pet in Pocket</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>물품 나눔 | Pet in Pocket</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="share.css">
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <section class="share-hero">
-  <h2>물품 나눔 게시판</h2>
-  <p>필요 없는 물건, 필요한 누군가에게. 따뜻한 나눔을 실천해보세요!</p>
-</section>
+  <!-- 헤더 (index.html에서 복사) -->
+  <header>
+    <h1><a href="index.html">Pet in Pocket</a></h1>
+    <div class="auth">
+      <a href="#">로그인</a>
+      <a href="#">회원가입</a>
+    </div>
+  </header>
+  <nav>
+    <a href="#">정보제공</a>
+    <a href="#">커뮤니티</a>
+    <a href="#">유기견/묘 입양</a>
+    <a href="share.html">물품 나눔</a>
+  </nav>
 
-<section class="share-controls">
-  <input type="text" placeholder="물품명으로 검색" class="search-bar">
-  <select class="category-filter">
-    <option>전체</option>
-    <option>사료</option>
-    <option>장난감</option>
-    <option>하우스</option>
-    <option>위생용품</option>
-  </select>
-  <button class="add-item-btn">+ 물품 등록</button>
-</section>
+  <!-- 해시태그 내비 -->
+  <nav class="hashtag-nav">
+    <a href="#food">#사료</a>
+    <a href="#toy">#장난감</a>
+    <a href="#house">#하우스</a>
+    <a href="#hygiene">#위생용품</a>
+    <a href="#etc">#기타</a>
+  </nav>
 
-<section class="item-list">
-  <div class="item-card">
-    <img src="images/sample1.jpg" alt="사료 이미지">
-    <h3>강아지 사료 3kg</h3>
-    <p>서울 / 나눔중</p>
-    <button>자세히 보기</button>
-  </div>
-  <!-- 다른 카드들 반복 -->
-</section>
+  <!-- 카테고리별 섹션 -->
+  <section id="food" class="item-section">
+    <h2>사료</h2>
+    <div class="item-grid" data-category="food"></div>
+    <button class="more-btn" data-category="food">더보기</button>
+  </section>
 
-  <p>Copyright © Pet in Pocket</p>
+  <section id="toy" class="item-section">
+    <h2>장난감</h2>
+    <div class="item-grid" data-category="toy"></div>
+    <button class="more-btn" data-category="toy">더보기</button>
+  </section>
+
+  <section id="house" class="item-section">
+    <h2>하우스</h2>
+    <div class="item-grid" data-category="house"></div>
+    <button class="more-btn" data-category="house">더보기</button>
+  </section>
+
+  <section id="hygiene" class="item-section">
+    <h2>위생용품</h2>
+    <div class="item-grid" data-category="hygiene"></div>
+    <button class="more-btn" data-category="hygiene">더보기</button>
+  </section>
+
+  <section id="etc" class="item-section">
+    <h2>기타</h2>
+    <div class="item-grid" data-category="etc"></div>
+    <button class="more-btn" data-category="etc">더보기</button>
+  </section>
+
+  <script src="share.js"></script>
 </body>
 </html>
