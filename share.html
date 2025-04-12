@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>물품 나눔 | Pet in Pocket</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="share.css">
 </head>
 <body>
-  <!-- 헤더 (index.html에서 복사) -->
+  <!-- 헤더 + 네비 (index.html과 동일) -->
   <header>
     <h1><a href="index.html">Pet in Pocket</a></h1>
     <div class="auth">
@@ -23,7 +23,13 @@
     <a href="share.html">물품 나눔</a>
   </nav>
 
-  <!-- 해시태그 버튼 내비게이션 -->
+  <!-- 🐶🐱 강아지/고양이 필터 -->
+  <div class="pet-filter-container">
+    <button class="pet-filter">강아지</button>
+    <button class="pet-filter">고양이</button>
+  </div>
+
+  <!-- 📌 해시태그 내비게이션 -->
   <div class="hashtag-container">
     <button onclick="location.href='#food'">#사료</button>
     <button onclick="location.href='#toy'">#장난감</button>
@@ -32,37 +38,7 @@
     <button onclick="location.href='#etc'">#기타</button>
   </div>
 
-  <!-- 카테고리별 섹션 -->
+  <!-- 📦 카테고리별 섹션 -->
   <section id="food" class="item-section">
-    <h2>사료</h2>
-    <div class="item-grid" data-category="food"></div>
-    <button class="more-btn" data-category="food">더보기</button>
-  </section>
-
-  <section id="toy" class="item-section">
-    <h2>장난감</h2>
-    <div class="item-grid" data-category="toy"></div>
-    <button class="more-btn" data-category="toy">더보기</button>
-  </section>
-
-  <section id="house" class="item-section">
-    <h2>하우스</h2>
-    <div class="item-grid" data-category="house"></div>
-    <button class="more-btn" data-category="house">더보기</button>
-  </section>
-
-  <section id="hygiene" class="item-section">
-    <h2>위생용품</h2>
-    <div class="item-grid" data-category="hygiene"></div>
-    <button class="more-btn" data-category="hygiene">더보기</button>
-  </section>
-
-  <section id="etc" class="item-section">
-    <h2>기타</h2>
-    <div class="item-grid" data-category="etc"></div>
-    <button class="more-btn" data-category="etc">더보기</button>
-  </section>
-
-  <script src="share.js"></script>
-</body>
-</html>
+    <h2>사료</h2
+ㄴ
