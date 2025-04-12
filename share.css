@@ -1,18 +1,167 @@
-/* share.css */
-.share-hero {
-  background-color: #ffebcc;
-  padding: 30px;
-  text-align: center;
+/* 해시태그 버튼 스타일 */
+.hashtag-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff3e0;
 }
 
-.share-hero h2 {
-  font-size: 32px;
+.hashtag-container button {
+  background-color: #ffaf53;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.hashtag-container button:hover {
+  background-color: #e6993d;
+}
+
+/* 카테고리 섹션 */
+.item-section {
+  padding: 40px 20px;
+}
+
+.item-section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* 그리드 */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.item-card {
+  background-color: #ffe0bd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  aspect-ratio: 1 / 1; /* 정사각형 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 80%;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.share-controls {
-  display: flex;
-  gap: 10px;
+.item-card h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+/* 더보기 버튼 */
+.more-btn {
+  display: block;
+  margin: 0 auto;
   padding: 10px 20px;
-  justify-content: space-between;
+  background-color: #b36c37;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background-color: #995522;
+}/* 해시태그 버튼 스타일 */
+.hashtag-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff3e0;
+}
+
+.hashtag-container button {
+  background-color: #ffaf53;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.hashtag-container button:hover {
+  background-color: #e6993d;
+}
+
+/* 카테고리 섹션 */
+.item-section {
+  padding: 40px 20px;
+}
+
+.item-section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* 그리드 */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.item-card {
+  background-color: #ffe0bd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  aspect-ratio: 1 / 1; /* 정사각형 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.item-card h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+/* 더보기 버튼 */
+.more-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #b36c37;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background-color: #995522;
 }
