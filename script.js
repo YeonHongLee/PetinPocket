@@ -1,12 +1,26 @@
 // 슬라이드 효과 (섹션이 존재할 때만 실행)
-window.addEventListener("DOMContentLoaded", () => {
+function activateSection() {
   const section = document.querySelector(".text-overlay-section");
-  if (section) {
-    section.classList.remove("active"); // 일단 제거
-    void section.offsetWidth; // 강제 리플로우 (애니메이션 초기화 트릭)
-    section.classList.add("active"); // 다시 추가
+  if (!section) return;
+
+  const img = section.querySelector("img");
+
+  if (img && !img.complete) {
+    img.addEventListener("load", () => {
+      section.classList.remove("active");
+      void section.offsetWidth;
+      section.classList.add("active");
+    });
+  } else {
+    section.classList.remove("active");
+    void section.offsetWidth;
+    section.classList.add("active");
   }
-});
+}
+
+window.addEventListener("DOMContentLoaded", activateSection);
+window.addEventListener("pageshow", activateSection);
+
 
   
   // 타이핑 효과 (대상 요소가 존재할 때만 실행)
