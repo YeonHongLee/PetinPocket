@@ -1,0 +1,18 @@
+/* share.css */
+.share-hero {
+  background-color: #ffebcc;
+  padding: 30px;
+  text-align: center;
+}
+
+.share-hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.share-controls {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
