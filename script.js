@@ -1,10 +1,13 @@
 // 슬라이드 효과 (섹션이 존재할 때만 실행)
 window.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector(".text-overlay-section");
-    if (section) {
-      section.classList.add("active");
-    }
-  });
+  const section = document.querySelector(".text-overlay-section");
+  if (section) {
+    section.classList.remove("active"); // 일단 제거
+    void section.offsetWidth; // 강제 리플로우 (애니메이션 초기화 트릭)
+    section.classList.add("active"); // 다시 추가
+  }
+});
+
   
   // 타이핑 효과 (대상 요소가 존재할 때만 실행)
   document.addEventListener("DOMContentLoaded", () => {
