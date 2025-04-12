@@ -46,16 +46,28 @@ function renderItems(category) {
   }
 }
 
+function setupMoreButtons() {
+  const moreButtons = document.querySelectorAll(".more-btn");
+  moreButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const cat = button.dataset.category;
+      renderItems(cat);
+    });
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
-});
+  setupMoreButtons();
 
-// 더보기 버튼
-const moreButtons = document.querySelectorAll(".more-btn");
-moreButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const cat = button.dataset.category;
-    renderItems(cat);
+  // 네비 이동 링크
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
   });
 });
 
@@ -72,6 +84,11 @@ window.addEventListener("scroll", () => {
     topBtn.style.display = "none";
   }
 });
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 
 topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
