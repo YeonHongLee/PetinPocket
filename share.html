@@ -4,16 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>물품 나눔 | Pet in Pocket</title>
-
-  <!-- 구글 폰트 불러오기 -->
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
-
-  <!-- 스타일시트 -->
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./share.css" />
 </head>
 <body>
-  <!-- 헤더 -->
   <header>
     <h1><a href="index.html">Pet in Pocket</a></h1>
     <div class="auth">
@@ -22,7 +17,6 @@
     </div>
   </header>
 
-  <!-- 네비게이션 -->
   <nav>
     <a href="info.html">정보제공</a>
     <a href="community.html">커뮤니티</a>
@@ -30,16 +24,14 @@
     <a href="share.html">물품 나눔</a>
   </nav>
 
-  <!-- 필터 + 해시태그 -->
-    <nav class="hashtag-nav">
-      <a href="#food">#사료</a>
-      <a href="#toy">#장난감</a>
-      <a href="#house">#하우스</a>
-      <a href="#hygiene">#위생용품</a>
-      <a href="#etc">#기타</a>
-    </nav>
+  <nav class="hashtag-nav">
+    <a href="#food">#사료</a>
+    <a href="#toy">#장난감</a>
+    <a href="#house">#하우스</a>
+    <a href="#hygiene">#위생용품</a>
+    <a href="#etc">#기타</a>
+  </nav>
 
-  <!-- 각 카테고리 섹션 -->
   <section id="food" class="item-section">
     <h2>사료</h2>
     <div class="item-grid" data-category="food"></div>
@@ -70,7 +62,16 @@
     <button class="more-btn" data-category="etc">더보기</button>
   </section>
 
-  <!-- top 버튼 -->
+  <!-- 강아지/고양이 필터 드롭다운 -->
+  <div class="pet-filter-selector">
+    <label for="pet-filter">필터:</label>
+    <select id="pet-filter">
+      <option value="all">전체</option>
+      <option value="dog">강아지 🐶</option>
+      <option value="cat">고양이 🐱</option>
+    </select>
+  </div>
+
   <script src="./share.js" defer></script>
 </body>
 </html>
