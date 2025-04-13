@@ -2,14 +2,17 @@
 const dummyItems = (category, count = 30) => {
   const items = [];
   for (let i = 1; i <= count; i++) {
+    const types = ['dog', 'cat']; // 이 중에서 랜덤 선택
+    const randomType = types[Math.floor(Math.random() * types.length)];
     items.push({
       title: `${category} 물품 ${i}`,
       img: "https://via.placeholder.com/150",
-      type: i % 2 === 0 ? 'dog' : 'cat' // 짝수: 강아지, 홀수: 고양이
+      type: randomType
     });
   }
   return items;
 };
+
 
 // 카테고리별 더미 아이템
 const categoryData = {
