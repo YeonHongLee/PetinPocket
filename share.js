@@ -1,20 +1,16 @@
-// 더미 데이터 생성 함수 (type: 'dog' 또는 'cat' 포함)
+// 더미 아이템 생성 (title + image)
 const dummyItems = (category, count = 30) => {
   const items = [];
   for (let i = 1; i <= count; i++) {
-    const types = ['dog', 'cat']; // 이 중에서 랜덤 선택
-    const randomType = types[Math.floor(Math.random() * types.length)];
     items.push({
       title: `${category} 물품 ${i}`,
-      img: "https://via.placeholder.com/150",
-      type: randomType
+      img: "https://via.placeholder.com/150"
     });
   }
   return items;
 };
 
-
-// 카테고리별 더미 아이템
+// 카테고리 데이터
 const categoryData = {
   food: dummyItems("사료"),
   toy: dummyItems("장난감"),
@@ -26,7 +22,12 @@ const categoryData = {
 const itemsPerPage = 9;
 const loadedCount = {};
 
-// 아이템 렌더링 함수
+// ✅ 이모지 하나만 랜덤 선택
+function getRandomEmoji() {
+  return Math.random() < 0.5 ? '🐶' : '🐱';
+}
+
+// 렌더링 함수
 function renderItems(category) {
   const grid = document.querySelector(`.item-grid[data-category="${category}"]`);
   if (!grid) return;
@@ -39,8 +40,10 @@ function renderItems(category) {
   slice.forEach(item => {
     const card = document.createElement("div");
     card.className = "item-card";
+    const emoji = getRandomEmoji();
+
     card.innerHTML = `
-      <div class="item-label">${item.type === 'dog' ? '🐶' : '🐱'}</div>
+      <div class="item-label">${emoji}</div>
       <img src="${item.img}" alt="${item.title}">
       <h3>${item.title}</h3>
     `;
@@ -54,7 +57,7 @@ function renderItems(category) {
   }
 }
 
-// 더보기 버튼 이벤트 등록
+// 더보기 버튼 이벤트
 function setupMoreButtons() {
   const moreButtons = document.querySelectorAll(".more-btn");
   moreButtons.forEach(button => {
@@ -65,12 +68,12 @@ function setupMoreButtons() {
   });
 }
 
-// 초기 실행
+// 초기 렌더링
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
   setupMoreButtons();
 
-  // 네비게이션 링크 이동 처리
+  // 네비 이동
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", e => {
       const href = link.getAttribute("href");
@@ -87,16 +90,13 @@ topBtn.id = "top-btn";
 topBtn.innerHTML = "▲";
 document.body.appendChild(topBtn);
 
-// Top 버튼 스크롤 이벤트
+// Top 버튼 표시 조건
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 600) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
+  topBtn.style.display = window.scrollY > 600 ? "block" : "none";
 });
 
-// Top 버튼 클릭 시 맨 위로
+// 클릭 시 맨 위로
 topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
