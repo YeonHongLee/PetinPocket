@@ -10,12 +10,6 @@ const dummyItems = (category, count = 30) => {
   }
   return items;
 };
-card.innerHTML = `
-  <div class="item-label">${item.type === 'dog' ? '🐶' : '🐱'}</div>
-  <img src="${item.img}" alt="${item.title}">
-  <h3>${item.title}</h3>
-`;
-
 
 // 카테고리별 더미 아이템
 const categoryData = {
@@ -103,5 +97,3 @@ window.addEventListener("scroll", () => {
 topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-
