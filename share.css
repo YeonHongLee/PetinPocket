@@ -12,6 +12,16 @@ body {
   padding: 20px;
   background-color: #fff3e0;
 }
+.item-card {
+  position: relative;
+}
+
+.item-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
 
 .pet-filter button {
   background-color: #4caf50;
