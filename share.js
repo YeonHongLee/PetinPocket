@@ -59,16 +59,6 @@ function setupMoreButtons() {
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
   setupMoreButtons();
-
-  // 네비 이동 링크
-  document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", e => {
-      const href = link.getAttribute("href");
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
 });
 
 // Top 버튼
@@ -84,11 +74,6 @@ window.addEventListener("scroll", () => {
     topBtn.style.display = "none";
   }
 });
-
-topBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
 
 topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
