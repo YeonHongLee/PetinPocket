@@ -1,9 +1,8 @@
-/* 전체 폰트 (index.html과 통일) */
 body {
   font-family: 'Gowun Dodum', sans-serif;
 }
 
-/* 강아지/고양이 탭 + 해시태그 */
+/* 해시태그 및 필터 */
 .hashtag-container {
   display: flex;
   justify-content: center;
@@ -12,11 +11,9 @@ body {
   gap: 10px;
   padding: 20px;
   background-color: #fff3e0;
-  font-family: 'Gowun Dodum', sans-serif;
 }
 
-/* 🐶🐱 필터 버튼 */
-.pet-filter {
+.pet-filter button {
   background-color: #4caf50;
   color: white;
   font-weight: bold;
@@ -25,11 +22,10 @@ body {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-/* 해시태그 버튼 */
-.hashtag-container button {
+.hashtag-nav a {
   background-color: #ffaf53;
   border: none;
   padding: 10px 15px;
@@ -38,17 +34,17 @@ body {
   cursor: pointer;
   color: white;
   font-size: 16px;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
-.hashtag-container button:hover {
+.hashtag-nav a:hover {
   background-color: #e6993d;
 }
 
-/* 카테고리 섹션 */
+/* 섹션 제목 */
 .item-section {
   padding: 40px 20px;
-  font-family: 'Gowun Dodum', sans-serif;
 }
 
 .item-section h2 {
@@ -57,12 +53,11 @@ body {
   margin-bottom: 20px;
 }
 
-/* 3x3 정사각형 그리드 */
+/* 그리드 */
 .item-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  justify-content: center;
   max-width: 800px;
   margin: 0 auto 20px auto;
 }
@@ -88,7 +83,7 @@ body {
   color: #333;
 }
 
-/* 더보기 버튼 */
+/* 더보기 */
 .more-btn {
   display: block;
   margin: 0 auto;
