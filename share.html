@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>물품 나눔 | Pet in Pocket</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="share.css">
+
+  <!-- 구글 폰트 불러오기 -->
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
+
+  <!-- 스타일시트 -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./share.css" />
 </head>
 <body>
-  <!-- 헤더 + 네비 (index.html과 동일) -->
+  <!-- 헤더 -->
   <header>
     <h1><a href="index.html">Pet in Pocket</a></h1>
     <div class="auth">
@@ -16,29 +21,31 @@
       <a href="#">회원가입</a>
     </div>
   </header>
+
+  <!-- 네비게이션 -->
   <nav>
-    <a href="#">정보제공</a>
-    <a href="#">커뮤니티</a>
-    <a href="#">유기견/묘 입양</a>
+    <a href="info.html">정보제공</a>
+    <a href="community.html">커뮤니티</a>
+    <a href="adopt.html">유기견/묘 입양</a>
     <a href="share.html">물품 나눔</a>
   </nav>
 
-  <!-- 🐶🐱 강아지/고양이 필터 -->
-  <div class="pet-filter-container">
-    <button class="pet-filter">강아지</button>
-    <button class="pet-filter">고양이</button>
-  </div>
-
-  <!-- 📌 해시태그 내비게이션 -->
+  <!-- 필터 + 해시태그 -->
   <div class="hashtag-container">
-    <button onclick="location.href='#food'">#사료</button>
-    <button onclick="location.href='#toy'">#장난감</button>
-    <button onclick="location.href='#house'">#하우스</button>
-    <button onclick="location.href='#hygiene'">#위생용품</button>
-    <button onclick="location.href='#etc'">#기타</button>
+    <div class="pet-filter">
+      <button>강아지</button>
+      <button>고양이</button>
+    </div>
+    <nav class="hashtag-nav">
+      <a href="#food">#사료</a>
+      <a href="#toy">#장난감</a>
+      <a href="#house">#하우스</a>
+      <a href="#hygiene">#위생용품</a>
+      <a href="#etc">#기타</a>
+    </nav>
   </div>
 
-  <!-- 📦 카테고리별 섹션 -->
+  <!-- 각 카테고리 섹션 -->
   <section id="food" class="item-section">
     <h2>사료</h2>
     <div class="item-grid" data-category="food"></div>
@@ -69,7 +76,9 @@
     <button class="more-btn" data-category="etc">더보기</button>
   </section>
 
-  <script src="share.js" defer></script>
+  <!-- top 버튼 -->
+  <script src="./share.js" defer></script>
 </body>
 </html>
+
  
