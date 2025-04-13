@@ -6,9 +6,6 @@
   <title>물품 나눔 | Pet in Pocket</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="share.css">
-  <!-- 구글 폰트 추가 -->
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <!-- 헤더 + 네비 (index.html과 동일) -->
@@ -43,5 +40,36 @@
 
   <!-- 📦 카테고리별 섹션 -->
   <section id="food" class="item-section">
-    <h2>사료</h2
-ㄴ
+    <h2>사료</h2>
+    <div class="item-grid" data-category="food"></div>
+    <button class="more-btn" data-category="food">더보기</button>
+  </section>
+
+  <section id="toy" class="item-section">
+    <h2>장난감</h2>
+    <div class="item-grid" data-category="toy"></div>
+    <button class="more-btn" data-category="toy">더보기</button>
+  </section>
+
+  <section id="house" class="item-section">
+    <h2>하우스</h2>
+    <div class="item-grid" data-category="house"></div>
+    <button class="more-btn" data-category="house">더보기</button>
+  </section>
+
+  <section id="hygiene" class="item-section">
+    <h2>위생용품</h2>
+    <div class="item-grid" data-category="hygiene"></div>
+    <button class="more-btn" data-category="hygiene">더보기</button>
+  </section>
+
+  <section id="etc" class="item-section">
+    <h2>기타</h2>
+    <div class="item-grid" data-category="etc"></div>
+    <button class="more-btn" data-category="etc">더보기</button>
+  </section>
+
+  <script src="share.js" defer></script>
+</body>
+</html>
+ 
