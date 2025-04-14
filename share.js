@@ -18,7 +18,7 @@ const categoryData = {
   etc: dummyItems("기타")
 };
 
-const itemsPerPage = 9;
+const itemsPerPage = 6;
 const loadedCount = {};
 
 // 🐾 랜덤 이모지 (강아지 or 고양이)
