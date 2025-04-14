@@ -30,6 +30,16 @@
     <a href="#etc">#기타</a>
   </div>
 
+   <!-- 필터 -->
+  <div class="pet-filter-selector">
+    <label for="pet-filter">필터:</label>
+    <select id="pet-filter">
+      <option value="all">전체</option>
+      <option value="dog">강아지 🐶</option>
+      <option value="cat">고양이 🐱</option>
+    </select>
+  </div>
+
   <!-- 섹션 -->
   <section id="food" class="item-section">
     <h2>사료</h2>
@@ -61,15 +71,6 @@
     <button class="more-btn" data-category="etc" data-action="expand">더보기</button>
   </section>
 
-  <!-- 필터 -->
-  <div class="pet-filter-selector">
-    <label for="pet-filter">필터:</label>
-    <select id="pet-filter">
-      <option value="all">전체</option>
-      <option value="dog">강아지 🐶</option>
-      <option value="cat">고양이 🐱</option>
-    </select>
-  </div>
 
   <script src="./share.js" defer></script>
 </body>
