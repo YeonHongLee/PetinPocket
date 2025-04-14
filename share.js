@@ -1,3 +1,4 @@
+// 더미 아이템 생성
 const dummyItems = (category, count = 30) => {
   const items = [];
   for (let i = 1; i <= count; i++) {
@@ -20,10 +21,12 @@ const categoryData = {
 const itemsPerPage = 9;
 const loadedCount = {};
 
+// 🐾 랜덤 이모지 (강아지 or 고양이)
 function getRandomEmoji() {
   return Math.random() < 0.5 ? '🐶' : '🐱';
 }
 
+// 카드 생성
 function renderItems(category, count = itemsPerPage) {
   const grid = document.querySelector(`.item-grid[data-category="${category}"]`);
   if (!grid) return;
@@ -39,6 +42,7 @@ function renderItems(category, count = itemsPerPage) {
 
     const emoji = getRandomEmoji();
     const type = emoji === '🐶' ? 'dog' : 'cat';
+
     card.setAttribute("data-type", type);
     card.setAttribute("data-extra", start >= itemsPerPage ? "true" : "false");
 
@@ -61,9 +65,10 @@ function renderItems(category, count = itemsPerPage) {
     btn.setAttribute("data-action", "expand");
   }
 
-  applyFilter();
+  applyFilter(); // 필터 재적용
 }
 
+// 축소 기능
 function collapseItems(category) {
   const grid = document.querySelector(`.item-grid[data-category="${category}"]`);
   const extraCards = grid.querySelectorAll('.item-card[data-extra="true"]');
@@ -77,6 +82,7 @@ function collapseItems(category) {
   applyFilter();
 }
 
+// 더보기 버튼 연결
 function setupMoreButtons() {
   const buttons = document.querySelectorAll(".more-btn");
   buttons.forEach(button => {
@@ -92,9 +98,11 @@ function setupMoreButtons() {
   });
 }
 
+// 필터 적용
 function applyFilter() {
   const filter = document.getElementById("pet-filter");
   const selected = filter?.value || "all";
+
   const allCards = document.querySelectorAll(".item-card");
   allCards.forEach(card => {
     const type = card.getAttribute("data-type");
@@ -102,6 +110,7 @@ function applyFilter() {
   });
 }
 
+// 초기 로딩
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
   setupMoreButtons();
@@ -112,20 +121,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   applyFilter();
-});
-
-// Top 버튼
-const topBtn = document.createElement("button");
-topBtn.id = "top-btn";
-topBtn.innerHTML = "▲";
-document.body.appendChild(topBtn);
-
-window.addEventListener("scroll", () => {
-  topBtn.style.display = window.scrollY > 600 ? "block" : "none";
-});
-
-topBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
