@@ -1,7 +1,57 @@
 body {
   font-family: 'Gowun Dodum', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* 헤더 */
+.site-header {
+  background-color: #efb665;
+  padding: 20px 0;
+}
+
+.header-inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.auth a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 내비게이션 */
+.main-nav {
+  background-color: #a46a3b;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* 해시태그 */
 .hashtag-nav {
   display: flex;
   justify-content: center;
@@ -28,6 +78,7 @@ body {
   background-color: #e6993d;
 }
 
+/* 섹션 & 카드 그리드 */
 .item-section {
   padding: 40px 20px;
 }
@@ -75,6 +126,7 @@ body {
   font-size: 20px;
 }
 
+/* 더보기 버튼 */
 .more-btn {
   display: block;
   margin: 0 auto;
@@ -91,6 +143,7 @@ body {
   background-color: #995522;
 }
 
+/* Top 버튼 */
 #top-btn {
   display: none;
   position: fixed;
@@ -111,6 +164,7 @@ body {
   background-color: #e6993d;
 }
 
+/* 필터 셀렉트 */
 .pet-filter-selector {
   position: fixed;
   bottom: 100px;
