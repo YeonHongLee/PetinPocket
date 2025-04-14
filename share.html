@@ -5,36 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>물품 나눔 | Pet in Pocket</title>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./share.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="logo"><a href="index.html">Pet in Pocket</a></h1>
-      <div class="auth">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
-      </div>
-    </div>
+  <!-- 헤더 -->
+  <header>
+    <h1><a href="index.html">Pet in Pocket</a></h1>
   </header>
 
-  <nav class="main-nav">
+  <!-- 네비게이션 -->
+  <nav>
     <a href="info.html">정보제공</a>
     <a href="community_category.html">커뮤니티</a>
     <a href="adopt.html">유기견/묘 입양</a>
     <a href="share.html">물품 나눔</a>
   </nav>
 
-  <nav class="hashtag-nav">
+  <!-- 해시태그 -->
+  <div class="hashtag-nav">
     <a href="#food">#사료</a>
     <a href="#toy">#장난감</a>
     <a href="#house">#하우스</a>
     <a href="#hygiene">#위생용품</a>
     <a href="#etc">#기타</a>
-  </nav>
+  </div>
 
-  <!-- 카테고리별 섹션 -->
+  <!-- 섹션 -->
   <section id="food" class="item-section">
     <h2>사료</h2>
     <div class="item-grid" data-category="food"></div>
@@ -65,6 +61,7 @@
     <button class="more-btn" data-category="etc" data-action="expand">더보기</button>
   </section>
 
+  <!-- 필터 -->
   <div class="pet-filter-selector">
     <label for="pet-filter">필터:</label>
     <select id="pet-filter">
