@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="./share.css" />
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Pet in Pocket</a></h1>
-    <div class="auth">
-      <a href="#">로그인</a>
-      <a href="#">회원가입</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="logo"><a href="index.html">Pet in Pocket</a></h1>
+      <div class="auth">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+      </div>
     </div>
   </header>
 
-  <nav>
+  <nav class="main-nav">
     <a href="info.html">정보제공</a>
     <a href="community_category.html">커뮤니티</a>
     <a href="adopt.html">유기견/묘 입양</a>
@@ -63,7 +65,6 @@
     <button class="more-btn" data-category="etc" data-action="expand">더보기</button>
   </section>
 
-  <!-- 🐾 필터: 강아지/고양이 선택 -->
   <div class="pet-filter-selector">
     <label for="pet-filter">필터:</label>
     <select id="pet-filter">
