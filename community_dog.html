@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>강아지 커뮤니티 - Pet in Pocket</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="community.css" />
+  <script defer src="community.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header><h1><a href="index.html">Pet in Pocket</a></h1></header>
+  <nav>
+    <a href="info.html">정보제공</a>
+    <a href="community_category.html" class="active">커뮤니티</a>
+    <a href="adopt.html">입양</a>
+    <a href="share.html">물품 나눔</a>
+  </nav>
+  <main>
+    <div class="sticky-bar">
+      <div class="category-tabs">
+        <button class="tab active">🐶 강아지 커뮤니티</button>
+        <button class="tab" onclick="location.href='community_cat.html'">🐱 고양이</button>
+        <button class="tab" onclick="location.href='community_tip.html'">💡 꿀팁</button>
+        <button class="tab" onclick="location.href='community_free.html'">💬 자유</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="검색어 입력">
+        <button id="search-btn">🔍</button>
+      </div>
+    </div>
+    <div class="post-form">
+      <div class="user-profile">
+        <img src="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg" class="profile-icon" alt="icon">
+      </div>
+      <input type="text" id="user-name" placeholder="이름을 입력하세요" />
+      <textarea id="post-content" placeholder="무엇이든 작성해보세요..."></textarea>
+      <label for="post-media" class="file-label">📷 이미지/영상 업로드</label>
+      <input type="file" id="post-media" accept="image/*,video/*" style="display: none;">
+      <select id="post-category">
+        <option value="dog" selected>강아지</option>
+        <option value="cat">고양이</option>
+        <option value="tip">꿀팁</option>
+        <option value="free">자유</option>
+      </select>
+      <button id="submit-post">게시</button>
+    </div>
+    <div id="post-list" class="post-list"></div>
+  </main>
+  <footer><p>이용약관 | 개인정보처리방침 | 이메일: | 고객센터: 1234-5678</p></footer>
+</body>
+</html>
