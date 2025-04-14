@@ -58,12 +58,11 @@ nav a {
 }
 
 .pet-filter-selector {
-  position: static !important;   /* 💥 고정 위치 해제 */
+  position: static !important;  
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff3e0;
   gap: 8px;
   margin-bottom: 20px;
 }
