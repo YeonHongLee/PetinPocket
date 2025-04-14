@@ -58,7 +58,7 @@ nav a {
 }
 
 .pet-filter-selector {
-  position: static !important;  
+  position: static;  
   display: flex;
   justify-content: flex-start;
   align-items: center;
