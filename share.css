@@ -78,7 +78,6 @@ nav a {
   margin: 0 auto 20px auto;
 }
 
-/* 필터 위치 조정 */
 .pet-filter-selector {
   display: flex;
   justify-content: flex-end;
@@ -87,7 +86,9 @@ nav a {
   background-color: #fff3e0;
   gap: 8px;
   margin-bottom: 20px;
+  position: static; /* ← fixed 제거 */
 }
+
 
 
 .item-card {
