@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>커뮤니티 카테고리 - Pet in Pocket</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="community.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Gowun Dodum', sans-serif;
+      margin: 0;
+      background-color: #fffaf2;
+    }
+    header {
+      background-color: #ffaf53;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 a {
+      color: white;
+      text-decoration: none;
+    }
+    nav {
+      background-color: #b36c37;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 30px 20px;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .category-card {
+      background-color: #fff3e0;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .category-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .category-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      color: #333;
+    }
+    .category-card p {
+      font-size: 14px;
+      color: #666;
+    }
+    footer {
+      background-color: #ffaf53;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Pet in Pocket</a></h1>
+  </header>
+  <nav>
+    <a href="info.html">정보제공</a>
+    <a href="community_category.html" class="active">커뮤니티</a>
+    <a href="adopt.html">유기견/묘 입양</a>
+    <a href="share.html">물품 나눔</a>
+  </nav>
+  <main>
+    <h2>참여하고 싶은 커뮤니티를 선택하세요 🐾</h2>
+    <div class="category-grid">
+      <a href="community_dog.html" class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="강아지">
+        <h3>강아지 커뮤니티</h3>
+        <p>#산책 #간식 #훈련</p>
+      </a>
+      <a href="community_cat.html" class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="고양이">
+        <h3>고양이 커뮤니티</h3>
+        <p>#냥냥이 #캣타워 #입양</p>
+      </a>
+      <a href="community_tip.html" class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828774.png" alt="팁">
+        <h3>꿀팁 공유방</h3>
+        <p>#초보집사 #건강관리 #생활지혜</p>
+      </a>
+      <a href="community_free.html" class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="자유">
+        <h3>자유게시판</h3>
+        <p>#잡담 #일상 #소통해요</p>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <p>이용약관 | 개인정보처리방침 | 팀정보 | 이메일: | 고객센터: 1234-5678</p>
+  </footer>
+</body>
+</html>
