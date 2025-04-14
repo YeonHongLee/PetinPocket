@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
     petFilter.addEventListener("change", applyFilter);
   }
 
-  const topBtn = document.createElement("button");
+const topBtn = document.createElement("button");
 topBtn.id = "top-btn";
 topBtn.innerHTML = "▲";
 document.body.appendChild(topBtn);
@@ -133,8 +133,5 @@ topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-
-  applyFilter();
-});
 
 
