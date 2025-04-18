@@ -38,7 +38,7 @@ nav a {
 }
 
 /* 개인작성시작 */
-h2 a {
+h2 > a {
   text-decoration: none;
 }
   
