@@ -37,3 +37,13 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
+
+
+
+
+
+/* 개인작성시작 */
+html {
+    scroll-behavior: smooth;
+  }
