@@ -38,9 +38,14 @@ nav a {
 }
 
 /* 개인작성시작 */
+h2 {
+  text-decoration: none;
+}
+  
 html {
     scroll-behavior: smooth;
   }
+
 main {
       padding: 30px 20px;
     }
