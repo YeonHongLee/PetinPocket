@@ -38,12 +38,10 @@ nav a {
   font-weight: bold;
 }
 
-
-
-
-
-
 /* 개인작성시작 */
 html {
     scroll-behavior: smooth;
   }
+main {
+      padding: 30px 20px;
+    }
