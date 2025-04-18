@@ -1,1 +1,226 @@
+body {
+  font-family: 'Gowun Dodum', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf2;
+}
 
+/* ✅ 통일된 헤더 */
+header {
+  background-color: #ffaf53;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 네비게이션 */
+nav {
+  background-color: #b36c37;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 탭 + 검색 */
+.sticky-bar {
+  background-color: #fff3e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.category-tabs .tab {
+  background-color: #efb25b;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.category-tabs .tab.active {
+  background-color: #a1542f;
+}
+
+.category-tabs .tab:hover {
+  background-color: #b36c37;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  background-color: #efb25b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 글쓰기 */
+.post-form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.post-form select {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.post-form button {
+  padding: 8px 16px;
+  background-color: #efb25b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 업로드 버튼 */
+.file-label {
+  display: inline-block;
+  background-color: #efb25b;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.file-label:hover {
+  background-color: #b36c37;
+}
+
+/* 프로필 아이콘 */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* 게시글 */
+.post-list .post {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-media {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+}
+
+/* 댓글 */
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment-section input {
+  width: 80%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.comment-section button {
+  padding: 6px 10px;
+  background-color: #efb25b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 푸터 */
+footer {
+  background-color: #ffaf53;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
