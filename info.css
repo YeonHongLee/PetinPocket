@@ -51,7 +51,7 @@ main {
     }
 div.dog {
   width: auto; height: auto;
-  background-color: white;
+  background-color: red;
   
   padding: 20px;
   border: 20px  solid black;
