@@ -51,7 +51,7 @@ main {
     }
 div.dog {
   width: auto; height: auto;
-  background-color: baby blue;
+  background-color: blue;
   
   padding: 20px;
   border: 5px #b36c37;
@@ -60,6 +60,6 @@ div.dog {
   border-radius: 40px;
 }
 
-div.dog > p {
-  text-align: center;
+div.dog {
+  line-height: auto;
 }
