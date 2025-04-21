@@ -55,9 +55,9 @@ div.dog {
   
   padding: 20px;
   border: 20px  solid black;
-  margin: 20px;
+  margin: 10px 30px 20px 30px;
 
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 div.dog > p {
