@@ -51,11 +51,11 @@ main {
     }
 div.dog {
   width: 100px; height: 100px;
-  background-color: red;
+  background-color: baby blue;
   
   padding: 20px;
-  border: 20px  solid black;
-  margin: 10px 30px 20px 30px;
+  border: 5px  solid black;
+  margin: 10px 30px 30px 30px;
 
   border-radius: 50px;
 }
