@@ -49,3 +49,7 @@ html {
 main {
       padding: 30px 20px;
     }
+div.dog {
+  padding: 30px white;
+  border: 5px  #b36c37;
+}
