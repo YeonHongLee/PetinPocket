@@ -50,7 +50,7 @@ main {
       padding: 30px 20px;
     }
 div.dog {
-  width: auto; height: auto;
+  width: 100px; height: 100px;
   background-color: red;
   
   padding: 20px;
@@ -61,5 +61,5 @@ div.dog {
 }
 
 div.dog > p {
-  line-height: auto;
+  line-height: 100px;
 }
