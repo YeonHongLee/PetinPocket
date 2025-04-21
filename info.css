@@ -50,14 +50,14 @@ main {
       padding: 30px 20px;
     }
 div.dog {
-  width: 100px; height: 100px;
+  width: auto; height: auto;
   background-color: baby blue;
   
   padding: 20px;
-  border: 5px  solid black;
-  margin: 10px 30px 30px 30px;
+  border: 5px #b36c37;
+  margin: 10px 30px 50px 30px;
 
-  border-radius: 50px;
+  border-radius: 40px;
 }
 
 div.dog > p {
