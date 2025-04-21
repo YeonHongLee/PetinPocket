@@ -59,3 +59,7 @@ div.dog {
 
   border-radius: 20px;
 }
+
+div.dog > p {
+  line-height: auto;
+}
