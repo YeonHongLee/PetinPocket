@@ -179,7 +179,8 @@ body {
 
 
 .issue-box {
-  padding: 50px;
+  padding: 100px 100px;
+  border: 3px;
 }
 
 
