@@ -1,0 +1,74 @@
+/* auth.css - 로그인/회원가입/마이페이지 스타일 */
+
+body {
+    margin: 0;
+    font-family: 'Gowun Dodum', sans-serif;
+    background-color: #fffaf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    background: #fff3e0;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #b36c37;
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #efb25b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #b36c37;
+  }
+  
+  p {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  a {
+    color: #b36c37;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+  }
+  
