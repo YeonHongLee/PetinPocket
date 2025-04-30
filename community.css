@@ -1,3 +1,5 @@
+/* community.css 최신 통합본 */
+
 body {
   font-family: 'Gowun Dodum', sans-serif;
   margin: 0;
@@ -5,26 +7,17 @@ body {
   background-color: #fffaf2;
 }
 
-/* ✅ 통일된 헤더 */
 header {
   background-color: #ffaf53;
   padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 28px;
-  line-height: 1.2;
-}
-
 header h1 a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* 네비게이션 */
 nav {
   background-color: #b36c37;
   display: flex;
@@ -38,7 +31,51 @@ nav a {
   font-weight: bold;
 }
 
-/* 탭 + 검색 */
+main {
+  padding: 20px;
+}
+
+/* 카테고리 카드 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #fff3e0;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.category-card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #333;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 카테고리 탭 + 검색 */
 .sticky-bar {
   background-color: #fff3e0;
   position: sticky;
@@ -76,6 +113,7 @@ nav a {
 .search-box {
   display: flex;
   gap: 8px;
+  margin-top: 10px;
 }
 
 .search-box input {
@@ -104,13 +142,16 @@ nav a {
 }
 
 .post-form input[type="text"],
-.post-form textarea {
+.post-form textarea,
+.post-form input[type="file"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .post-form select {
@@ -130,61 +171,61 @@ nav a {
   cursor: pointer;
 }
 
-/* 업로드 버튼 */
-.file-label {
-  display: inline-block;
-  background-color: #efb25b;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
-}
-
-.file-label:hover {
-  background-color: #b36c37;
-}
-
-/* 프로필 아이콘 */
-.profile-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
 /* 게시글 */
-.post-list .post {
+.post {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .post-header {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.post-content {
-  font-size: 16px;
-  margin-bottom: 10px;
+.post-menu {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
 }
 
-.post-media {
-  max-width: 100%;
+.post-menu-box {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff3e0;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 5px;
+  z-index: 100;
+}
+
+.post-menu-box button {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+}
+
+.post-menu-box button:hover {
+  background-color: #f6d8a5;
 }
 
 .post-actions {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .post-actions button {
@@ -194,7 +235,6 @@ nav a {
   cursor: pointer;
 }
 
-/* 댓글 */
 .comment-section {
   margin-top: 10px;
 }
@@ -216,7 +256,15 @@ nav a {
   cursor: pointer;
 }
 
-/* 푸터 */
+/* 프로필 아이콘 (작게 줄임) */
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 footer {
   background-color: #ffaf53;
   color: white;
@@ -224,4 +272,3 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
-
