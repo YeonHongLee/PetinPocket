@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마이페이지 - Pet in Pocket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+  <script src="auth.js" defer></script>
+  <script src="mypage.js" defer></script>
+  <style>
+    body {
+      background-color: #fffaf2;
+      font-family: 'Gowun Dodum', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffaf53;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 a {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+    }
+    nav {
+      background-color: #b36c37;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    #auth-buttons {
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .auth-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .auth-container img.profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px auto;
+      display: block;
+    }
+    .auth-container label, .auth-container input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      background-color: #deb064;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c48a3c;
+    }
+      .auth-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 40px;
+      padding-top: 60px;
+      min-height: calc(100vh - 100px);
+    }
+  </style>
+</head>
+<body>
+  
+
+  <main class="auth-wrapper" style="margin-top: 80px;">
+  <div class="auth-container">
+    <h2>내 정보 수정</h2>
+    <div id="user-info"></div>
+
+    <form id="update-form">
+      <label>프로필 이미지:</label>
+      <input type="file" id="profile-upload" accept="image/*">
+      <img id="profile-preview" class="profile" src="" alt="프로필 미리보기" style="display:none;">
+
+      <input type="text" id="nickname" placeholder="닉네임">
+      <input type="email" id="email" placeholder="이메일">
+      <button type="submit">정보 수정</button>
+    </form>
+
+    <button onclick="logout()">로그아웃</button>
+    <button onclick="deleteAccount()">회원탈퇴</button>
+  </div>
+</main>
+</body>
+</html>
