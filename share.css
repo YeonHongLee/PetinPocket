@@ -99,10 +99,17 @@ nav a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.item-card:hover {
+  transform: scale(1.05);
+  background-color: #ffd8a3;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* 겹치는 카드 위로 올리기 */
 }
 
 .item-card img {
