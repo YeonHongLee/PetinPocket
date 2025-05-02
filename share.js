@@ -1,14 +1,4 @@
-// 총 카드 수를 15개로 고정
-const dummyItems = (category, count = 15) => {
-  const items = [];
-  for (let i = 1; i <= count; i++) {
-    items.push({
-      title: `${category} 물품 ${i}`,
-      img: `./images/pip_share/snack${i}.jpg` // snack1.jpg ~ snack15.jpg
-    });
-  }
-  return items;
-};
+const dummyItems = () => {}; // ❌ 더 이상 필요 없음
 
 
 const categoryData = {
