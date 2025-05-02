@@ -119,10 +119,16 @@ const emoji = type === 'dog' ? '🐶' : '🐱';
     card.setAttribute("data-extra", start >= itemsPerPage ? "true" : "false");
 
     card.innerHTML = `
-      <div class="item-label">${emoji}</div>
-      <img src="${item.img}" alt="${item.title}">
-      <h3>${item.title}</h3>
-    `;
+  <div class="item-label">${emoji}</div>
+  <img src="${item.img}" alt="${item.title}">
+  <h3>${item.title}</h3>
+  <div class="item-meta">
+    <span class="comment">🗨️ 3</span>
+    <span class="like">💖 10</span>
+    <span class="claim">📦</span>
+  </div>
+`;
+
     grid.appendChild(card);
   });
 
