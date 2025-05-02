@@ -1,4 +1,4 @@
-const dummyItems = () => {}; 
+
 
 
 const categoryData = {
@@ -95,10 +95,7 @@ const categoryData = {
 const itemsPerPage = 6;
 const loadedCount = {};
 
-// 🐾 랜덤 이모지 (강아지 or 고양이)
-function getRandomEmoji() {
-  return Math.random() < 0.5 ? '🐶' : '🐱';
-}
+
 
 // 카드 생성
 function renderItems(category, count = itemsPerPage) {
