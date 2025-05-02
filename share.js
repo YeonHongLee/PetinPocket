@@ -43,8 +43,9 @@ function renderItems(category, count = itemsPerPage) {
     const card = document.createElement("div");
     card.className = "item-card";
 
-    const emoji = getRandomEmoji();
-    const type = emoji === '🐶' ? 'dog' : 'cat';
+    const type = item.type || "dog"; // 기본값 dog
+const emoji = type === 'dog' ? '🐶' : '🐱';
+
 
     card.setAttribute("data-type", type);
     card.setAttribute("data-extra", start >= itemsPerPage ? "true" : "false");
