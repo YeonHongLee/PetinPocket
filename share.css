@@ -106,18 +106,12 @@ nav a {
 }
 .item-card img {
   width: 100%;
-  height: auto;
-  max-height: 70%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  flex-grow: 1;
 }
 
-
-.item-card img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 10px;
-}
 
 .item-card h3 {
   margin: 0;
