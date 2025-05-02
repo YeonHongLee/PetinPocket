@@ -1,15 +1,16 @@
-// 더미 아이템 생성
-const dummyItems = (category, count = 30) => {
+// 총 카드 수를 15개로 고정
+const dummyItems = (category, count = 15) => {
   const items = [];
   for (let i = 1; i <= count; i++) {
     items.push({
       title: `${category} 물품 ${i}`,
-      img: "https://via.placeholder.com/150"
+      img: `https://via.placeholder.com/150` // 실제 이미지 경로로 변경 가능
     });
   }
   return items;
 };
 
+// 카테고리별 데이터
 const categoryData = {
   food: dummyItems("사료"),
   toy: dummyItems("장난감"),
@@ -18,6 +19,7 @@ const categoryData = {
   etc: dummyItems("기타")
 };
 
+// 한 번에 보이는 개수
 const itemsPerPage = 6;
 const loadedCount = {};
 
@@ -63,6 +65,11 @@ function renderItems(category, count = itemsPerPage) {
   } else {
     btn.textContent = "더보기";
     btn.setAttribute("data-action", "expand");
+  }
+
+  // 카드 수가 itemsPerPage 이하라면 버튼 숨김
+  if (items.length <= itemsPerPage) {
+    btn.style.display = "none";
   }
 
   applyFilter(); // 필터 재적용
@@ -120,19 +127,17 @@ window.addEventListener("DOMContentLoaded", () => {
     petFilter.addEventListener("change", applyFilter);
   }
 
-const topBtn = document.createElement("button");
-topBtn.id = "top-btn";
-topBtn.innerHTML = "▲";
-document.body.appendChild(topBtn);
+  const topBtn = document.createElement("button");
+  topBtn.id = "top-btn";
+  topBtn.innerHTML = "▲";
+  document.body.appendChild(topBtn);
 
-window.addEventListener("scroll", () => {
-  topBtn.style.display = window.scrollY > 600 ? "block" : "none";
+  window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 600 ? "block" : "none";
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
-
-topBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-}); 
-
 
