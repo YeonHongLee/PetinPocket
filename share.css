@@ -98,6 +98,10 @@ nav a {
   aspect-ratio: 1 / 1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow: hidden; /* 이미지 넘칠 때 자르기 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .item-card img {
