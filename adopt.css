@@ -1,0 +1,175 @@
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf2;
+  }
+  
+  header {
+    background-color: #ffaf53;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+nav {
+    background-color: #b36c37;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+ }
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+main {
+    padding: 20px;
+}
+  
+  /* 입양 페이지 adopt 전용 스타일 */
+  .adopt-section, .detail-section {
+    padding: 2rem;
+  }
+  
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-bar select,
+  .filter-bar input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #efb25b;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .filter-buttons button.active {
+    background: #efb25b;
+    color: #333;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  
+  .animal-card {
+    width: 240px;
+    border: 2px solid #efb25b;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fffaf0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .animal-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .animal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #fff3e0;
+  }
+  
+  .animal-card .info {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .badge {
+    background-color: #efb25b;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .apply-btn {
+    padding: 10px 20px;
+    background-color: #f5a623;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .filter-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .card-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .animal-card {
+      width: 90%;
+    }
+  }
+  
