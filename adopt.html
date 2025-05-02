@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>유기견/묘 입양양 - Pet in Pocket</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>보호소 입양 - 펫인포켓</title>
+  <link rel="stylesheet" href="adopt.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-  <h1><a href="index.html">Pet in Pocket</a></h1>
-  </header>
+    <header>
+        <h1><a href="index.html">Pet in Pocket</a></h1>
+      </header>
 
   <nav>
     <a href="info.html">정보제공</a>
     <a href="community_category.html">커뮤니티</a>
-    <a href="adopt.html">유기견/묘 입양</a>
+    <a href="adopt.html" class="active">유기견/묘 입양</a>
     <a href="share.html">물품 나눔</a>
   </nav>
 
-  <main>
-    <h2>입양 및 구조 페이지</h2>
-    <p>ㅇㅇㅇㅇㅇㅇ</p>
+  <main class="adopt-section">
+    <h2>보호소 입양</h2>
+
+    <div class="filter-bar">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-type="dog">강아지</button>
+        <button class="filter-btn" data-type="cat">고양이</button>
+      </div>
+      <select id="breed-filter"><option>품종</option></select>
+      <select id="region-filter"><option>지역</option></select>
+      <input type="text" id="search-input" placeholder="이름 또는 지역으로 검색" />
+    </div>
+
+    <p class="adopt-count">🐾 <strong id="count"></strong> 마리의 아이들이 보호자를 기다리고 있어요</p>
+    <div id="card-list" class="card-list"></div>
   </main>
 
   <footer>
     <p>Copyright © Pet in Pocket</p>
   </footer>
+  script src="adopt.js"></script>
 </body>
 </html>
