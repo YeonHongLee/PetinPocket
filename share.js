@@ -12,12 +12,29 @@ const dummyItems = (category, count = 15) => {
 
 
 const categoryData = {
-  food: dummyItems("사료"),
+  food: [
+    { title: "DAEJEO 강아지사료! 나눔합니다", img: "./images/pip_share/snack1.jpg", type: "dog" },
+    { title: "스마일 독 사료 소분 나눔해요~", img: "./images/pip_share/snack2.jpg", type: "dog" },
+    { title: "로얄 캐닌 소형견용 사료나눔", img: "./images/pip_share/snack3.jpg", type: "dog" },
+    { title: "생협함께 반려견사료 나눔합니다", img: "./images/pip_share/snack4.jpg", type: "dog" },
+    { title: "리얼 사료 나눔", img: "./images/pip_share/snack5.jpg", type: "dog" },
+    { title: "벨릭서 고양이 사료 나눔해요", img: "./images/pip_share/snack6.jpg", type: "cat" },
+    { title: "9나인케어 2박스 있습니다", img: "./images/pip_share/snack7.jpg", type: "cat" },
+    { title: "2세이상 강아지사료", img: "./images/pip_share/snack8.jpg", type: "dog" },
+    { title: "유기농사료 5개 나눔", img: "./images/pip_share/snack9.jpg", type: "dog" },
+    { title: "연어사료4개 나눔해요", img: "./images/pip_share/snack10.jpg", type: "cat" },
+    { title: "bonacibo 나눔", img: "./images/pip_share/snack11.jpg", type: "dog" },
+    { title: "프로틴사료 2kg 3개 있습니", img: "./images/pip_share/snack12.jpg", type: "cat" },
+    { title: "매일맘마 화식 나눔해요", img: "./images/pip_share/snack13.jpg", type: "cat" },
+    { title: "velixer 소분 나눔", img: "./images/pip_share/snack14.jpg", type: "cat" },
+    { title: "true origin  2버전 나눔합니당", img: "./images/pip_share/snack15.jpg", type: "dog" }
+  ],
   toy: [],
   house: [],
   hygiene: [],
   etc: []
 };
+
 
 
 // 한 번에 보이는 개수
