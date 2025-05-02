@@ -1,4 +1,4 @@
-const dummyItems = () => {}; // ❌ 더 이상 필요 없음
+const dummyItems = () => {}; 
 
 
 const categoryData = {
@@ -19,7 +19,11 @@ const categoryData = {
     { title: "velixer 소분 나눔", img: "./images/pip_share/snack14.jpg", type: "cat" },
     { title: "true origin  2버전 나눔합니당", img: "./images/pip_share/snack15.jpg", type: "dog" }
   ],
-  toy: [],
+  toy: [
+    { title: "노즈워크볼 나눔해요!!", img: "./images/pip_toy/toy1.jpeg", type: "dog" },
+
+    
+  ],
   house: [],
   hygiene: [],
   etc: []
