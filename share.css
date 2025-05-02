@@ -58,13 +58,28 @@ nav a {
 }
 
 .pet-filter-selector {
-  position: static;  
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#share-btn {
+  background-color: #ffaf53;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#share-btn:hover {
+  background-color: #e6993d;
 }
 
 /* 섹션 공통 */
