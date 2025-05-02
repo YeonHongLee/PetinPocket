@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>입양 상세 정보 - 펫인포켓</title>
+  <link rel="stylesheet" href="adopt.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  <style>
+    .detail-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fefefe;
+    }
+    .detail-container img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .detail-info {
+      margin-top: 20px;
+    }
+    .detail-info h2 {
+      margin-bottom: 10px;
+    }
+    .detail-info p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+    .back-btn, .adopt-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .back-btn {
+      background: #efb25b;
+      color: #333;
+    }
+    .adopt-btn {
+      background: #ff9b9b;
+      color: white;
+      margin-left: 10px;
+    }
+
+    /* 모달 스타일 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .modal-content input {
+      width: 90%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    .modal-content button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .modal-content .close {
+      background: #aaa;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="detail-container" id="detail-container">
+    <p>로딩 중...</p>
+  </div>
+
+  <!-- 모달창 -->
+  <div class="modal" id="adoptModal">
+    <div class="modal-content">
+      <h3>입양 신청서</h3>
+      <input type="text" id="applicantName" placeholder="이름">
+      <input type="text" id="contactInfo" placeholder="연락처">
+      <input type="text" id="reason" placeholder="입양 사유">
+      <div>
+        <button onclick="submitApplication()">신청하기</button>
+        <button class="close" onclick="closeModal()">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const added = JSON.parse(localStorage.getItem("addedAnimals") || "[]");
+    const additionalPets = [
+    { id: "dog11", type: "dog", name: "보리", age: "2살", gender: "여아", breed: "푸들", region: "부산", neutered: "O", description: "사람을 잘 따르는 활발한 푸들이에요!", img: "https://images.unsplash.com/photo-1605244863941-3a3ed921c60d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: "dog12", type: "dog", name: "행운이", age: "1살", gender: "남아", breed: "믹스견", region: "대전", neutered: "예정", description: "조금 낯가리지만 금방 친해져요!", img: "https://images.unsplash.com/photo-1528919632209-de1db1493d97?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: "dog13", type: "dog", name: "초코", age: "4살", gender: "남아", breed: "비숑 프리제", region: "인천", neutered: "O", description: "복슬복슬하고 안기길 좋아하는 아이예요.", img: "https://images.unsplash.com/photo-1587539975099-5aecb74902d4?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: "dog14", type: "dog", name: "사랑이", age: "3살", gender: "여아", breed: "시츄", region: "서울", neutered: "O", description: "사람을 잘 따르고 애교 많은 시츄입니다.", img: "https://images.unsplash.com/photo-1534628526458-a8de087b1123?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: "dog15", type: "dog", name: "감자", age: "1살", gender: "남아", breed: "말티즈", region: "경기", neutered: "예정", description: "작고 활발한 말티즈! 산책을 좋아해요.", img: "https://images.unsplash.com/photo-1634680687995-159e560f1de2?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { id: "dog16", type: "dog", name: "두부", age: "5살", gender: "남아", breed: "골든리트리버", region: "부산", neutered: "O", description: "조용하고 순한 대형견, 아이들과도 잘 어울려요.", img: "https://plus.unsplash.com/premium_photo-1661951641996-3685492b78ed?q=80&w=3126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+
+    { id: "cat11", type: "cat", name: "나비", age: "3살", gender: "여아", breed: "코리안 숏헤어", region: "서울", neutered: "O", description: "햇볕 아래 낮잠 자는 걸 좋아해요.", img: "https://images.unsplash.com/photo-1535094962277-273a7abe6628?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fCVFQyVCRCU5NCVFQiVBNiVBQyVFQyU5NSU4OCUyMCVFQyU4OCU4RiVFRCU5NyVBNCVFQyU5NiVCNCUyMCVFRCU5NSU5QyVFQSVCNSVBRCVFQSVCMyVBMCVFQyU5NiU5MSVFQyU5RCVCNHxlbnwwfHwwfHx8MA%3D%3D" },
+    { id: "cat12", type: "cat", name: "망고", age: "6개월", gender: "남아", breed: "스코티시 폴드", region: "경기", neutered: "X", description: "호기심 많고 장난꾸러기!", img: "https://images.unsplash.com/photo-1612174340967-c5186e69344f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JUVDJThBJUE0JUVDJUJEJTk0JUVEJThCJUIwJUVDJThCJTlDJTIwJUVEJThGJUI0JUVCJTkzJTlDfGVufDB8fDB8fHww" },
+    { id: "cat13", type: "cat", name: "루비", age: "2살", gender: "여아", breed: "러시안 블루", region: "광주", neutered: "O", description: "얌전하고 우아한 고양이에요.", img: "https://images.unsplash.com/photo-1479134262046-a470bfaf7a66?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVCJTlGJUFDJUVDJThCJTlDJUVDJTk1JTg4JUVCJUI4JTk0JUVCJUEzJUE4fGVufDB8fDB8fHww" },
+    { id: "cat14", type: "cat", name: "미미", age: "2살", gender: "여아", breed: "샴", region: "서울", neutered: "O", description: "호기심 많고 소리에 민감한 고양이에요.", img: "https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVDJTgzJUI0fGVufDB8fDB8fHww" },
+    { id: "cat15", type: "cat", name: "밤비", age: "1살", gender: "남아", breed: "아메리칸 숏헤어", region: "대전", neutered: "X", description: "활발하고 장난꾸러기지만 순해요.", img: "https://images.unsplash.com/photo-1598017720921-946225de6f04?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVFRCU4RSU5OCVFQiVBNSVCNCVFQyU4QiU5QyVFQyU5NSU4OHxlbnwwfHwwfHx8MA%3D%3D" }
+  ];
+
+    const animals = [...added, ...additionalPets];
+
+    function getQueryParam(key) {
+      return new URLSearchParams(location.search).get(key);
+    }
+
+    let currentPet = null;
+
+    function renderDetail() {
+      const id = getQueryParam("id");
+      const pet = animals.find(p => p.id === id);
+      currentPet = pet;
+
+      const container = document.getElementById("detail-container");
+
+      if (!pet) {
+        container.innerHTML = "<p>해당 동물을 찾을 수 없습니다.</p>";
+        return;
+      }
+
+      container.innerHTML = `
+        <img src="${pet.img}" alt="${pet.name}">
+        <div class="detail-info">
+          <h2>${pet.name} (${pet.type === "dog" ? "강아지" : "고양이"})</h2>
+          <p><strong>나이:</strong> ${pet.age}</p>
+          <p><strong>성별:</strong> ${pet.gender}</p>
+          <p><strong>품종:</strong> ${pet.breed}</p>
+          <p><strong>중성화:</strong> ${pet.neutered}</p>
+          <p><strong>지역:</strong> ${pet.region}</p>
+          <p><strong>소개:</strong> ${pet.description}</p>
+          <a href="adopt.html" class="back-btn">← 목록으로 돌아가기</a>
+          <span class="adopt-btn" onclick="openModal()">입양 신청</span>
+        </div>
+      `;
+    }
+
+    function openModal() {
+      document.getElementById("adoptModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("adoptModal").style.display = "none";
+    }
+
+    function submitApplication() {
+      const name = document.getElementById("applicantName").value.trim();
+      const contact = document.getElementById("contactInfo").value.trim();
+      const reason = document.getElementById("reason").value.trim();
+
+      if (!name || !contact || !reason) {
+        alert("모든 항목을 입력해주세요.");
+        return;
+      }
+
+      alert(`${currentPet.name}에 대한 입양 신청이 완료되었습니다.\n감사합니다, ${name}님!`);
+      closeModal();
+    }
+
+    renderDetail();
+  </script>
+</body>
+</html>
