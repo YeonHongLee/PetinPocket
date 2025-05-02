@@ -4,39 +4,21 @@ const dummyItems = (category, count = 15) => {
   for (let i = 1; i <= count; i++) {
     items.push({
       title: `${category} 물품 ${i}`,
-      img: `https://via.placeholder.com/150` // 실제 이미지 경로로 변경 가능
+      img: `./images/pip_share/snack${i}.jpg` // snack1.jpg ~ snack15.jpg
     });
   }
   return items;
 };
 
-// 카테고리별 데이터
+
 const categoryData = {
-   food: [
-    { title: "강아지 간식", img: "./images/pip_share/snack1.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack2.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack3.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack4.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack5.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack6.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack7.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack8.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack9.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack10.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack11.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack12.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack13.jpg" },
-    { title: "고양이 사료", img: "./images/pip_share/snack14.jpg" }
-    { title: "강아지 간식", img: "./images/pip_share/snack15.jpg" },
-  ],
-  toy: [
-    { title: "삑삑이 장난감", img: "./images/pip_share/toy1.jpg" },
-    { title: "공놀이 장난감", img: "./images/pip_share/toy2.jpg" }
-  ],
+  food: dummyItems("사료"),
+  toy: [],
   house: [],
   hygiene: [],
   etc: []
 };
+
 
 // 한 번에 보이는 개수
 const itemsPerPage = 6;
