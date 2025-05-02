@@ -21,10 +21,26 @@ const categoryData = {
   ],
   toy: [
     { title: "노즈워크볼 나눔해요!!", img: "./images/pip_toy/toy1.jpeg", type: "dog" },
-
-    
+    { title: "움직이는 인형", img: "./images/pip_toy/toy2.jpeg", type: "dog" },
+    { title: "강아지용 장난감 나눔합니다", img: "./images/pip_toy/toy3.jpeg", type: "dog" },
+    { title: "주물럭 장난감입니당", img: "./images/pip_toy/toy4.jpeg", type: "dog" },
+    { title: "노즈워크 강아지 간식장난감", img: "./images/pip_toy/toy5.jpeg", type: "dog" },
+    { title: "고양이장난감 나눔해요", img: "./images/pip_toy/toy6.jpeg", type: "cat" },
+    { title: "고양이 장난감 나눔합니다", img: "./images/pip_toy/toy7.jpeg", type: "cat" },
+    { title: "장난감 겸 인형 나눔", img: "./images/pip_toy/toy8.jpeg", type: "dog" },
+    { title: "창의력발달용 장난감", img: "./images/pip_toy/toy9.jpeg", type: "cat" },
+    { title: "소리나는 장난감 나눔해요", img: "./images/pip_toy/toy10.jpeg", type: "dog" },
+    { title: "강아지 노즈워크 플레이보드", img: "./images/pip_toy/toy11.jpeg", type: "dog" },
+    { title: "강아지 인형 나눔합니다", img: "./images/pip_toy/toy12.jpeg", type: "dog" },
+    { title: "곰돌이 장난감 새제품나눔", img: "./images/pip_toy/toy13.jpeg", type: "cat" },
+    { title: "원반 장난감 나눔해용", img: "./images/pip_toy/toy14.jpeg", type: "dog" },
+    { title: "소리나는 자동 전자장난감", img: "./images/pip_toy/toy15.jpeg", type: "dog" },    
   ],
-  house: [],
+  house: [
+    { title: "노즈워크볼 나눔해요!!", img: "./images/pip_house/house1.jpeg", type: "dog" },
+    { title: "노즈워크볼 나눔해요!!", img: "./images/pip_house/house2.jpeg", type: "dog" },
+    { title: "노즈워크볼 나눔해요!!", img: "./images/pip_house/house3.jpeg", type: "dog" },
+  ],
   hygiene: [],
   etc: []
 };
