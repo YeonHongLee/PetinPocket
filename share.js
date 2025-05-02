@@ -74,7 +74,7 @@ const categoryData = {
     { title: "사료보관통 나눔합니다", img: "./images/pip_etc/etc1.jpg", type: "dog" },
     { title: "강아지 식기 나눔", img: "./images/pip_etc/etc2.jpg", type: "dog" },
     { title: "고양이 옷걸이 행거 나눔해요 ", img: "./images/pip_etc/etc3.jpg", type: "cat" },
-    { title: "강아지 이동가방 나눔", img: "./images/pip_etce/etc4.jpg", type: "dog" },
+    { title: "강아지 이동가방 나눔", img: "./images/pip_etc/etc4.jpg", type: "dog" },
     { title: "강아지 식기 색별로 있어요", img: "./images/pip_etc/etc5.jpg", type: "dog" },
     { title: "강아지 펫캠 나눔", img: "./images/pip_etc/etc6.jpg", type: "dog" },
     { title: "사료보관통 나눔합니다", img: "./images/pip_etc/etc7.jpg", type: "dog" },
