@@ -188,6 +188,24 @@ nav a {
   background-color: #e6993d;
 }
 
+.item-meta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.item-meta span {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.item-meta span:hover {
+  transform: scale(1.2);
+}
+
+
 .modal {
   position: fixed;
   top: 0; left: 0;
