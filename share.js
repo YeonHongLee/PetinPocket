@@ -217,3 +217,8 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.querySelector(".close-btn").addEventListener("click", () => {
+  document.getElementById("upload-modal").classList.add("hidden");
+});
+
+
