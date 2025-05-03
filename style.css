@@ -276,6 +276,10 @@ div.contents b {
     color: black;
 }
 
+.posting a:hover {
+    text-decoration: underline;
+}
+
 /* 유기견/묘 입양구조홍보 */
 .rescues {
    flex: 1;
