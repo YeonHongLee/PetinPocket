@@ -36,6 +36,13 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+footer {
+  background-color: #ffaf53;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
 
 /* 개인작성시작 */
 h1 > a {
@@ -52,11 +59,22 @@ main {
 
 div.dog {
   width: auto; height: auto;
-  background-color:  lemonchiffon;
+  background-color:  #fff3e0;
   
   padding: 30px;
-  border: 2px solid #ffaf53;
-  border-style: dashed;
+  border: 2px solid lab(62.63% 58.51 -22.69);
+  margin: 0px 30px 70px 30px;
+
+  line-height: 2.0;
+
+  border-radius: 40px;
+}
+div.cat {
+  width: auto; height: auto;
+  background-color:  #fff3e0;
+  
+  padding: 30px;
+  border: 2px solid lab(52.81% 29.6 -60.51);
   margin: 0px 30px 70px 30px;
 
   line-height: 2.0;
