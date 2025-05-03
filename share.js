@@ -1,8 +1,10 @@
+// 한 번에 보이는 개수
+const itemsPerPage = 6;
+const loadedCount = {};
 
-
-
+// 전체 카테고리 데이터
 const categoryData = {
-  food: [
+ food: [
     { title: "DAEJEO 강아지사료! 나눔합니다", img: "./images/pip_share/snack1.jpg", type: "dog" },
     { title: "스마일 독 사료 소분 나눔해요~", img: "./images/pip_share/snack2.jpg", type: "dog" },
     { title: "로얄 캐닌 소형견용 사료나눔", img: "./images/pip_share/snack3.jpg", type: "dog" },
@@ -89,15 +91,7 @@ const categoryData = {
   ]
 };
 
-
-
-// 한 번에 보이는 개수
-const itemsPerPage = 6;
-const loadedCount = {};
-
-
-
-// 카드 생성
+// 카드 생성 함수
 function renderItems(category, count = itemsPerPage) {
   const grid = document.querySelector(`.item-grid[data-category="${category}"]`);
   if (!grid) return;
@@ -111,23 +105,39 @@ function renderItems(category, count = itemsPerPage) {
     const card = document.createElement("div");
     card.className = "item-card";
 
-    const type = item.type || "dog"; // 기본값 dog
-const emoji = type === 'dog' ? '🐶' : '🐱';
-
+    const type = item.type || "dog";
+    const emoji = type === "dog" ? "🐶" : "🐱";
+    const commentCount = Math.floor(Math.random() * 10) + 1;
+    const likeCount = Math.floor(Math.random() * 30) + 1;
 
     card.setAttribute("data-type", type);
     card.setAttribute("data-extra", start >= itemsPerPage ? "true" : "false");
 
     card.innerHTML = `
-  <div class="item-label">${emoji}</div>
-  <img src="${item.img}" alt="${item.title}">
-  <h3>${item.title}</h3>
-  <div class="item-meta">
-    <span class="comment">🗨️ 3</span>
-    <span class="like">💖 10</span>
-    <span class="claim">📦</span>
-  </div>
-`;
+      <div class="item-label" style="font-size: 24px;">${emoji}</div>
+      <img src="${item.img}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <div class="item-meta">
+        <span class="comment">🗨️ ${commentCount}</span>
+        <span class="like">💖 <span class="like-count">${likeCount}</span></span>
+        <span class="claim" style="cursor: pointer;">📦</span>
+      </div>
+    `;
+
+    // 찜 수 증가
+    card.querySelector(".like").addEventListener("click", () => {
+      const countSpan = card.querySelector(".like-count");
+      countSpan.textContent = parseInt(countSpan.textContent) + 1;
+    });
+
+    // 나눔담기 팝업
+    card.querySelector(".claim").addEventListener("click", () => {
+      const popup = document.createElement("div");
+      popup.className = "popup-message";
+      popup.textContent = "나눔 담기에 추가되었습니다!";
+      document.body.appendChild(popup);
+      setTimeout(() => popup.remove(), 2000);
+    });
 
     grid.appendChild(card);
   });
@@ -143,12 +153,11 @@ const emoji = type === 'dog' ? '🐶' : '🐱';
     btn.setAttribute("data-action", "expand");
   }
 
-  // 카드 수가 itemsPerPage 이하라면 버튼 숨김
   if (items.length <= itemsPerPage) {
     btn.style.display = "none";
   }
 
-  applyFilter(); // 필터 재적용
+  applyFilter();
 }
 
 // 축소 기능
@@ -165,7 +174,7 @@ function collapseItems(category) {
   applyFilter();
 }
 
-// 더보기 버튼 연결
+// 더보기 버튼 이벤트 연결
 function setupMoreButtons() {
   const buttons = document.querySelectorAll(".more-btn");
   buttons.forEach(button => {
@@ -181,7 +190,7 @@ function setupMoreButtons() {
   });
 }
 
-// 필터 적용
+// 필터링 적용
 function applyFilter() {
   const filter = document.getElementById("pet-filter");
   const selected = filter?.value || "all";
@@ -193,7 +202,7 @@ function applyFilter() {
   });
 }
 
-// 초기 로딩
+// 초기 실행
 window.addEventListener("DOMContentLoaded", () => {
   Object.keys(categoryData).forEach(cat => renderItems(cat));
   setupMoreButtons();
@@ -203,6 +212,7 @@ window.addEventListener("DOMContentLoaded", () => {
     petFilter.addEventListener("change", applyFilter);
   }
 
+  // Top 버튼
   const topBtn = document.createElement("button");
   topBtn.id = "top-btn";
   topBtn.innerHTML = "▲";
@@ -215,10 +225,30 @@ window.addEventListener("DOMContentLoaded", () => {
   topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
 
-document.querySelector(".close-btn").addEventListener("click", () => {
-  document.getElementById("upload-modal").classList.add("hidden");
-});
+  // 팝업 스타일
+  const style = document.createElement("style");
+  style.textContent = `
+    .popup-message {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      z-index: 2000;
+      font-size: 14px;
+      animation: fadeOut 2s ease forwards;
+    }
 
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; top: 0px; }
+    }
+  `;
+  document.head.appendChild(style);
+});
 
