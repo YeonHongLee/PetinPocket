@@ -81,3 +81,25 @@ div.cat {
 
   border-radius: 40px;
 }
+ul p {
+  margin: 0;
+}
+ul li {
+  margin: 10px 0 0 0;
+}
+li {
+  font-size: large;
+}
+.float {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+ol .float:first-child {
+  margin-right: 40px;
+}
+
+ol {
+  display: flex;
+}
