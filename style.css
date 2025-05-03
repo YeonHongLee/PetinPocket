@@ -280,20 +280,15 @@ div.contents b {
 div.rescue-box {
     padding: auto 20px;
     height: 780px;
-    width: 550px;
     display: flex;
     border-radius: 10px;
     background-color: #ffd8a3;
     flex-wrap: wrap;
-}
-.rescue-box {
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   margin: 10px;
 }
+
 
 .rescue-item {
   width: calc(50% - 20px); /* 한 줄에 두 개씩, 간격 고려 */
@@ -363,14 +358,12 @@ body {
     padding: 0 15px;
 }
 
-/* 반응형 네비게이션 */
-
 /* 반응형 섹션 */
 section {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .main-sections {
         flex-direction: column;
     }
@@ -400,4 +393,4 @@ section {
     .typing-effect {
         font-size: 24px;
     }
-}\
+}
