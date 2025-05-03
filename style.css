@@ -266,6 +266,8 @@ div.contents b {
     margin: 0;
 }
 .posting {
+  text-decoration: none;
+  color: black;
   background-color: #fffaf0;
   border-radius: 10px;
   padding: 20px;
