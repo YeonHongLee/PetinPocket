@@ -257,7 +257,7 @@ div.contents b {
 }
 .hotpost {
   margin-top: 0;
-  width: 48%;
+  flex: 1;
 }
 .posting h3 {
     margin-top: 0;
@@ -277,6 +277,9 @@ div.contents b {
 }
 
 /* 유기견/묘 입양구조홍보 */
+.rescues {
+   flex: 1;
+}
 div.rescue-box {
     padding: auto 20px;
     height: 780px;
