@@ -68,6 +68,7 @@ header h1 a {
   filter: brightness(70%);
 }
 
+/* 절대좌표 */
 .hero-text {
   position: absolute;
   top: 50%;
