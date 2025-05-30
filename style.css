@@ -184,14 +184,15 @@ footer {
 }
 
 /* 메인페이지 하단 이슈정보부터 시작 */
+/* 수평정렬 */
 div.issue-box {
-    padding: auto 20px; /* 좌우 여백 줄임 */
+    padding: auto 20px;
     height: 400px;
     display: flex;
     border-radius: 10px;
     background-color: #ffd8a3;
-    margin: 15px 20px 5px 20px; /* 전체적인 좌우 여백 유지 */
-    overflow-x: auto; /* 가로 스크롤 활성화 (화면이 좁아질 때) */
+    margin: 15px 20px 5px 20px;
+    overflow-x: auto;
 }
 div.contents {
     height: 380px;
