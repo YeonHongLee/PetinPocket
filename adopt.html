@@ -6,11 +6,14 @@
   <title>보호소 입양 - 펫인포켓</title>
   <link rel="stylesheet" href="adopt.css" />
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  
+  <!-- ✅ jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Pet in Pocket</a></h1>
-      </header>
+  <header>
+    <h1><a href="index.html">Pet in Pocket</a></h1>
+  </header>
 
   <nav>
     <a href="info.html">정보제공</a>
@@ -35,6 +38,8 @@
     <p class="adopt-count">🐾 <strong id="count"></strong> 마리의 아이들이 보호자를 기다리고 있어요</p>
     <div id="card-list" class="card-list"></div>
   </main>
- <script src="adopt.js"></script>
+
+  <!-- ✅ jQuery 기반 adopt.js -->
+  <script src="adopt_jquery.js"></script>
 </body>
 </html>
