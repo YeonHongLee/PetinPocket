@@ -107,8 +107,8 @@ function renderItems(category, count = itemsPerPage) {
 
     const type = item.type || "dog";
     const emoji = type === "dog" ? "🐶" : "🐱";
-    const commentCount = Math.floor(Math.random() * 10) + 1;
-    const likeCount = Math.floor(Math.random() * 30) + 1;
+    const commentCount = Math.floor(Math.random() * 4) + 1;
+    const likeCount = Math.floor(Math.random() * 15) + 1;
 
     card.setAttribute("data-type", type);
     card.setAttribute("data-extra", start >= itemsPerPage ? "true" : "false");
