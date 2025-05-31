@@ -1,13 +1,10 @@
 /* auth.css - 로그인/회원가입/마이페이지 스타일 */
 
+* { margin: 0; padding: 0;}
+
 body {
-    margin: 0;
     font-family: 'Gowun Dodum', sans-serif;
     background-color: #fffaf2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
   
   .form-container {
@@ -17,6 +14,10 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     width: 320px;
+    
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
   }
   
   h2 {
