@@ -5,6 +5,17 @@ body {
   color: black;
 }
 
+/* 원트루레이아웃 */
+#middle { overflow: hidden;}
+#left {
+  float: left;
+  width: 60%;
+}
+#right {
+  float: right;
+  width: 40%;
+}
+
 /* 헤더 */
 header {
   background-color: #ffaf53 ;
@@ -244,7 +255,6 @@ div.contents b {
 
 /* 섹션 양옆 배치 */
 .main-sections {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
@@ -339,6 +349,13 @@ div.rescue-box {
     font-size: 0.9rem;
     color: #444;
   }
+
+  div.video-box {
+    padding: 15px 15px;
+    border-radius: 10px;
+    background-color: #ffd8a3;
+    margin: 10px;
+}
 
 
 /* 반응형웹 */
