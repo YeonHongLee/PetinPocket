@@ -29,7 +29,7 @@ const categoryData = {
     { title: "노즈워크 강아지 간식장난감", img: "./images/pip_toy/toy5.jpeg", type: "dog" },
     { title: "고양이장난감 나눔해요", img: "./images/pip_toy/toy6.jpeg", type: "cat" },
     { title: "고양이 장난감 나눔합니다", img: "./images/pip_toy/toy7.jpeg", type: "cat" },
-    { title: "장난감 겸 인형 나눔", img: "./images/pip_toy/toy8.jpeg", type: "dog" },
+    { title: "귀여운 인형 새제품 나눔 ", img: "./images/pip_toy/toy000.jpg", type: "dog" },
     { title: "창의력발달용 장난감", img: "./images/pip_toy/toy9.jpeg", type: "cat" },
     { title: "소리나는 장난감 나눔해요", img: "./images/pip_toy/toy10.jpeg", type: "dog" },
     { title: "강아지 노즈워크 플레이보드", img: "./images/pip_toy/toy11.jpeg", type: "dog" },
